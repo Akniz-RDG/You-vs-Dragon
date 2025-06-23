@@ -1,3 +1,4 @@
+/* Estilo general */
 body {
   margin: 0;
   padding: 0;
@@ -9,12 +10,14 @@ body {
   align-items: center;
 }
 
+/* Menú principal */
 .menu {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  text-align: center;
 }
 
 .menu h1 {
@@ -36,13 +39,15 @@ body {
   cursor: pointer;
 }
 
+/* Zona del dragón */
 .dragon-area {
   width: 100%;
-  height: 400px;
+  height: 250px;
   background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .dragon-area img {
@@ -50,6 +55,7 @@ body {
   object-fit: contain;
 }
 
+/* Barras de vida */
 .health-container {
   position: relative;
   width: 90%;
@@ -87,6 +93,7 @@ body {
   font-size: 0.95rem;
 }
 
+/* Zona de combate */
 .combat-zone {
   width: 90%;
   display: flex;
@@ -112,6 +119,7 @@ body {
 .info-player { background-color: #1a1a1a; font-style: italic; }
 .info-resultado { background-color: #333; }
 
+/* Barra de temporizador */
 .timer-bar-container {
   width: 100%;
   height: 10px;
@@ -128,6 +136,7 @@ body {
   transition: width 2s linear;
 }
 
+/* Botones de acción */
 .actions {
   position: fixed;
   bottom: 0;
@@ -147,8 +156,49 @@ body {
   background-color: #444;
   color: white;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .actions button:hover {
   background-color: #666;
+}
+
+/* 🎯 ESTILO RESPONSIVE PARA CELULAR */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  .dragon-area {
+    height: 180px;
+  }
+
+  .dragon-area img {
+    width: 100%;
+    height: auto;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .actions button {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .combat-info {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .health-text {
+    font-size: 0.9rem;
+  }
+
+  .info-bloque {
+    font-size: 0.95rem;
+  }
 }
