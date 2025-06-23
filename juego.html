@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Combate</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!--Musica del juego sin autoplay-->
+<button onclick="document.getElementById('musica-fondo').play()">▶️ Reproducir Música</button>
+
+  <div class="dragon-area" id="dragon-area">
+    <img src="assets/dragon.png" alt="Dragón" id="dragon-img" />
+  </div>
+
+  <!-- Vida del dragón -->
+  <div class="health-container">
+    <div class="health-fill dragon" id="dragon-health-fill"></div>
+    <div class="health-text" id="dragon-health">500 / 500</div>
+  </div>
+
+  <!-- Zona de combate -->
+  <div class="combat-zone">
+    <div class="combat-info">
+      <div id="dragon-announce" class="info-bloque info-dragon">🐲 El dragón se prepara...</div>
+      <div id="player-choice" class="info-bloque info-player">🤺 Aún no has elegido acción</div>
+      <div id="combat-result" class="info-bloque info-resultado"></div>
+    </div>
+    <div class="timer-bar-container">
+      <div id="timer-bar"></div>
+    </div>
+  </div>
+
+  <!-- Vida del jugador -->
+  <div class="health-container">
+    <div class="health-fill player" id="player-health-fill"></div>
+    <div class="health-text" id="player-health">100 / 100</div>
+  </div>
+
+  <!-- Botones de acción -->
+  <div class="actions">
+    <button id="block-btn">🛡️ Bloquear</button>
+    <button id="dodge-btn">🤸 Esquivar</button>
+    <button id="skin-btn">🐉 Piel de Dragón</button>
+  </div>
+
+  <script src="script.js"></script>
+  <audio id="musica-fondo" src="assets/musica-fondo.mp3" loop></audio>
+</body>
+</html>
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cómo tankear a tu dragón</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="menu">
+    <h1>🐉 Cómo Tankear a tu Dragón</h1>
+    <button onclick="reproducirRugido()">Comenzar</button>
+    <button onclick="location.href='instrucciones.html'">Instrucciones</button>
+  </main>
+  <audio id="roar" src="assets/dragon-roar.mp3"></audio>
+<script>
+  function reproducirRugido() {
+    const rugido = document.getElementById("rugido");
+    rugido.volume = 1;
+
+    rugido.play().then(() => {
+      // Decimos que debe sonar música al entrar a juego.html
+      localStorage.setItem("musica-activada", "true");
+      setTimeout(() => {
+        location.href = "juego.html";
+      }, 6000);
+    }).catch(() => {
+      localStorage.setItem("musica-activada", "true");
+      location.href = "juego.html";
+    });
+  }
+</script>
+<audio id="rugido" src="assets/dragon-roar.mp3"></audio>
+<audio id="musica-fondo" src="assets/musica-fondo.mp3" loop></audio>
+</body>
+</html>

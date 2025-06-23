@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #111;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.menu h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.menu button {
+  width: 70%;
+  margin: 10px;
+  padding: 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #444;
+  color: white;
+  cursor: pointer;
+}
+
+.dragon-area {
+  width: 100%;
+  height: 550px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dragon-area img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.health-container {
+  position: relative;
+  width: 90%;
+  height: 24px;
+  background-color: #222;
+  border-radius: 12px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.health-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: width 0.4s ease;
+  border-radius: 12px 0 0 12px;
+}
+
+.health-fill.dragon {
+  background-color: crimson;
+}
+
+.health-fill.player {
+  background-color: #00cc66;
+}
+
+.health-text {
+  position: relative;
+  text-align: center;
+  line-height: 24px;
+  font-weight: bold;
+  z-index: 2;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.combat-zone {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.combat-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.info-bloque {
+  padding: 6px 12px;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.info-dragon { background-color: #222; font-weight: bold; }
+.info-player { background-color: #1a1a1a; font-style: italic; }
+.info-resultado { background-color: #333; }
+
+.timer-bar-container {
+  width: 100%;
+  height: 10px;
+  background-color: #333;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+#timer-bar {
+  width: 0%;
+  height: 100%;
+  background-color: yellow;
+  transition: width 2s linear;
+}
+
+.actions {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #222;
+  padding: 15px 0;
+}
+
+.actions button {
+  width: 30%;
+  padding: 15px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #444;
+  color: white;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background-color: #666;
+}
