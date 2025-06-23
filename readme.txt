@@ -47,7 +47,7 @@ Ganas si reduces su vida a 0. Pierdes si la tuya llega a 0.
 ## 🚀 Cómo jugar
 
 
-Enlace al repositorio Aquí: https://github.com/Akniz-RDG/You-vs-Dragon.git
+Enlace al repositorio Aquí: https://akniz-rdg.github.io/You-vs-Dragon/
 
 ---
 
